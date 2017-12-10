@@ -1,0 +1,302 @@
+/* YOUR CUSTOM STYLES */
+
+.col-lg-4 {
+
+    padding-right: 5px;
+    padding-left: 5px;
+
+}
+
+.card .activator {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #000; 
+}
+
+.card-footer {
+    border-top: 1px solid rgba(0,0,0,.125);
+}
+.card-footer, .card-header {
+    padding: .75rem 1.25rem;
+    background-color: #f7f7f9;
+}
+
+*, ::after, ::before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+.card .card-footer .left {
+    float: left;
+}
+
+.card .card-footer .right {
+    float: right;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.card .card-footer {
+    background-color: transparent;
+    padding: .75rem .5rem 0;
+}
+
+.card .card-footer .left .discount {
+    text-decoration: line-through;
+    color: #9e9e9e;
+    font-size: 1.1rem;
+}
+
+.btn {
+    font-size: .8rem;
+    /* padding: .85rem 2.13rem; */
+    border-radius: 0px;
+    border: 0;
+    color: #fff!important;
+    /* margin: 6px; */
+    white-space: normal!important;
+}
+
+.price {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: -2px;
+}
+
+
+.btn-floating.btn-large i {
+    line-height: 55.5px;
+}
+
+.btn-floating i {
+    width: inherit;
+    text-align: center;
+    font-size: 1.6rem;
+}
+.btn-floating, .btn-floating i {
+    display: inline-block;
+    line-height: 37px;
+    color: #fff;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fa {
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fa, .fa-stack {
+    display: inline-block;
+}
+*, ::after, ::before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+.btn-floating.btn-large {
+    width: 55.5px;
+    height: 55.5px;
+}
+
+.custom-select, .pswp__button, [type=reset], [type=submit], button, button.close, html [type=button], input[type=search], input[type=range] {
+    -webkit-appearance: none;
+}
+.btn-ins {
+    background-color: #3F729B;
+}
+
+#contact .fa {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1C2331;
+}
+.teal-text {
+    color: #009688!important;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.section .section-heading {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+
+.pricing-card.card-overlay {
+    display: block;
+    color: #fff;
+}
+
+.pricing-card {
+    text-align: center;
+}
+
+.card-overlay {
+    background-size: cover;
+    padding: 1.5rem;
+    border-radius: 2px;
+}
+
+.card .card-circle, .card-overlay, .flex-center, .section.team-section .avatar, .testimonial-carousel .testimonial .avatar {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+}
+
+.white-text {
+    color: #FFF!important;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+*, ::after, ::before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+.card-block {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.card-block h5 {
+    font-size: 1rem;
+}
+.card-block h3, .card-block h5 {
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.pricing-card .price {
+    position: relative;
+    padding-top: 3rem;
+}
+
+.pricing-card .price h1, .pricing-card .price h2 {
+    font-size: 5rem;
+    padding: 1.5rem;
+    font-weight: 300;
+}
+
+.pricing-card .striped {
+    padding: .6rem;
+}
+
+a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.btn.btn-lg {
+    font-size: .9rem;
+    padding: 1rem 2.4rem;
+}
+.btn-outline-white {
+    border: 2px solid #fff;
+    color: #fff!important;
+    background-color: transparent;
+}
+
+.pricing-card .price h1:before, .pricing-card .price h2:before {
+    content: "N$";
+    font-size: 30px;
+    position: absolute;
+    margin-left: -2.2rem;
+    margin-top: .7rem;
+}
+
+
+
+.pricing-card .striped li {
+    border-bottom: 1px solid rgba(153,153,153,.298039);
+    margin-bottom: 1rem;
+}
+
+
+
+
+a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.btn-floating.btn-small, .btn-floating.wishlist, .card .card-share .social-reveal .btn-floating {
+    height: 47px;
+    width: 47px;
+    line-height: 0;
+}
+
+.btn-floating {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 37px;
+    height: 37px;
+    padding: 0;
+    background-color: #a6c;
+    border-radius: 50%;
+    -webkit-transition: .3s;
+    transition: .3s;
+    margin: 10px;
+}
+
+.btn-floating, .btn-floating i {
+    display: inline-block;
+    line-height: 37px;
+    color: #fff;
+}
+
+.btn-floating, .card .card-reveal .card-title, .card-wrapper .back .card-title, .dropdown-content li, .file-field span, .mdb-autocomplete-wrap li, input[type=range], input[type=range]+.thumb {
+    cursor: pointer;
+}
+.btn .fa, .btn-floating, .picker__box, .product-table td, .switch label .lever {
+    vertical-align: middle;
+}
+
+
+
+.fixed-action-btn {
+    position: fixed;
+    right: 23px;
+    bottom: 23px;
+    padding-top: 15px;
+    margin-bottom: 0;
+    z-index: 998;
+}
