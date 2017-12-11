@@ -51,7 +51,7 @@
                     <h5 class="title">Contact Us</h5>
                     <ul>
                         <li><a href="#!">+264 81 377 0919</a></li>
-                        <li><a href="#!">hello@choma.na</a></li>
+                        <li><a href="#!">hello@choma.co</a></li>
                         <br>
                         <li><a href="#!">We are Social</a>
                         <hr>
@@ -90,7 +90,7 @@
         <!--Copyright-->
         <div class="footer-copyright">
             <div class="container-fluid">
-                © 2017 Copyright: <a href="http://www.viverecreatives.com"> Vivere Technologies </a>
+                © 2018 Copyright: <a href="http://www.viverecreatives.com"> Vivere Technologies </a>
 
             </div>
         </div>
