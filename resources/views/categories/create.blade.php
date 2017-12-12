@@ -25,6 +25,8 @@
        <!-- <input type="text" id="form32" class="form-control"> -->
 
          {{Form::text('name', '', ['class' => 'form-control'])}}
+
+
         <label for="form34">Category Name</label>
     </div>
 
