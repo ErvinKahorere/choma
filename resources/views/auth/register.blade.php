@@ -314,6 +314,8 @@
         </div>
     </nav>
 
+@include('inc.messages')
+
 
 
 
@@ -335,6 +337,8 @@
                         </div>
                         <div class="col-md-6 col-xl-5 offset-xl-1">
                             <!--Form-->
+                            <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+                                {{ csrf_field() }}
                             <div class="card wow fadeInRight" data-wow-delay="0.3s" style="animation-name: none; visibility: visible;">
                                 <div class="card-body">
                                     <!--Header-->
@@ -347,21 +351,60 @@
                                     <!--Body-->
                                     <div class="md-form">
                                         <i class="fa fa-user prefix white-text"></i>
-                                        <input type="text" id="form3" class="form-control">
+                                     {{--   <input type="text" id="form3" class="form-control">--}}
+                                        <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required>
+
                                         <label for="form3" class="">Your name</label>
+                                        @if ($errors->has('name'))
+                                            <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
                                     <div class="md-form">
                                         <i class="fa fa-envelope prefix white-text"></i>
-                                        <input type="email" id="form2" class="form-control">
+                                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
                                         <label for="form2" class="">Your email</label>
+                                        @if ($errors->has('email'))
+                                            <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
+
+
+                                    <div class="md-form">
+                                        <i class="fa fa-phone prefix white-text"></i>
+                                        <input id="phone_number" type="text" class="form-control"  name="phone_number" value="{{ old('phone_number') }}" required>
+                                        <label for="form2" class="">Phone</label>
+
+                                    </div>
+
+
+
+
+
+
                                     <div class="md-form">
                                         <i class="fa fa-lock prefix white-text"></i>
-                                        <input type="password" id="form4" class="form-control">
+                                        <input id="password" type="password" class="form-control" name="password" required>
                                         <label for="form4" class="">Your password</label>
                                     </div>
+
+                                    <div class="md-form">
+                                        <i class="fa fa-lock prefix white-text"></i>
+                                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                        <label for="form4" class="">Retype password</label>
+                                    </div>
+
+                                 {{--   <div class="md-form">
+                                        <i class="fa fa-lock prefix white-text"></i>
+                                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                        <label for="form4" class="form-control">Retype password</label>
+                                    </div>--}}
+
                                     <div class="text-center">
-                                        <button class="btn btn-indigo waves-effect waves-light">Sign up</button>
+                                        <button type="submit" class="btn btn-indigo waves-effect waves-light">Sign up</button>
                                         <hr class="hr-light mb-3 mt-4">
                                         <div class="inline-ul text-center d-flex justify-content-center">
 
@@ -380,6 +423,7 @@
                                     </div>
                                 </div>
                             </div>
+                            </form>
                             <!--/.Form-->
                         </div>
                     </div>

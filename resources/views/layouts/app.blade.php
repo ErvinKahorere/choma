@@ -71,8 +71,7 @@
 
            @include('inc.messages')
            
-           @include('inc.top_slider')
-
+        {{--   @include('inc.top_slider') --}}
             <div class="row">
                     @include('inc.sidebar')
             

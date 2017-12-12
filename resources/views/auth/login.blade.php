@@ -201,6 +201,9 @@
     </nav>
 
 
+@include('inc.messages')
+
+
 
 
 
@@ -220,6 +223,9 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-xl-5 offset-xl-1">
+
+                            <form class="" method="POST" action="{{ route('login') }}">
+                            {{ csrf_field() }}
                             <!--Form-->
                             <div class="card wow fadeInRight" data-wow-delay="0.3s" style="animation-name: none; visibility: visible;">
                                 <div class="card-body">
@@ -238,20 +244,30 @@
                                     </div>--}}
                                     <div class="md-form">
                                         <i class="fa fa-envelope prefix white-text"></i>
-                                        <input type="email" id="form2" class="form-control">
+                                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
                                         <label for="form2" class="">Your email</label>
+                                        @if ($errors->has('email'))
+                                            <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
                                     <div class="md-form">
                                         <i class="fa fa-lock prefix white-text"></i>
-                                        <input type="password" id="form4" class="form-control">
+                                        <input id="password" type="password" class="form-control" name="password" required>
                                         <label for="form4" class="">Your password</label>
+                                        @if ($errors->has('password'))
+                                            <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
                                     <div class="inline-ul text-center">
 
                                         <a class="btn btn-link" href="{{ route('password.request') }}">
                                             Forgot Your Password?
                                         </a>
-                                        <button class="btn btn-indigo waves-effect waves-light">Login</button>
+                                        <button  type="submit"  class="btn btn-indigo waves-effect waves-light">Login</button>
 
                                     </div>
                                         <hr class="hr-light mb-3 mt-4">
@@ -270,8 +286,11 @@
                                             </a>
                                         </div>
 
+
+
                                     </div>
                                 </div>
+                            </form>
                             </div>
                             <!--/.Form-->
                         </div>
