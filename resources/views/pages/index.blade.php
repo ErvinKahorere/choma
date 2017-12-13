@@ -155,11 +155,35 @@
                  <div class="carousel-inner" role="listbox">
 
                      <!--First slide-->
-                     <div class="carousel-item">
+                     <div class="carousel-item active">
 
-                         <div class="col-md-4">
+                         @if(count($merchants) > 0)
+                             @foreach($merchants as $merchant)
+                                 <div class="col-md-4">
+                                     <div class="card">
+                                         <img class="img-fluid" src="http://viverecreatives.com/choma/bg-losangeles-white.png" alt="">
+
+                                         <div class="avatar_card">
+                                             <a href="/merchants/{{$merchant->id}}">
+                                                 <img src="/storage/merchant_logos/{{$merchant->merchant_logo}}"
+                                                      class="rounded-circle" alt="{{$merchant->merchant_name}} logo">
+                                             </a>
+                                         </div>
+                                         <div class="card-body card-block text-center">
+                                             <h4 class="card-title">{{$merchant->merchant_name}}</h4>
+                                             <p class="card-text">{{$merchant->merchant_city}}</p>
+                                  {{--           <a class="btn btn-primary waves-effect waves-light">Subscribe</a>--}}
+                                         </div>
+                                     </div>
+                                 </div>
+                             @endforeach
+                         @endif
+
+
+
+               {{--          <div class="col-md-4 clearfix d-none d-md-block">
                              <div class="card">
-                                 <img class="img-fluid" src="http://viverecreatives.com/choma/bg-losangeles-white.png" alt="">
+                                 <img class="img-fluid" src="http://viverecreatives.com/choma/bg-losangeles-white.png" alt="Card image cap">
 
                                  <div class="avatar_card">
                                      <img src="https://www.solodev.com/assets/carousel/image3.png" class="rounded-circle" alt="Sample avatar image.">
@@ -185,28 +209,13 @@
                                      <a class="btn btn-primary waves-effect waves-light">Subscribe</a>
                                  </div>
                              </div>
-                         </div>
-
-                         <div class="col-md-4 clearfix d-none d-md-block">
-                             <div class="card">
-                                 <img class="img-fluid" src="http://viverecreatives.com/choma/bg-losangeles-white.png" alt="Card image cap">
-
-                                 <div class="avatar_card">
-                                     <img src="https://www.solodev.com/assets/carousel/image3.png" class="rounded-circle" alt="Sample avatar image.">
-                                 </div>
-                                 <div class="card-body card-block text-center">
-                                     <h4 class="card-title">Store Name</h4>
-                                     <p class="card-text">Store Location</p>
-                                     <a class="btn btn-primary waves-effect waves-light">Subscribe</a>
-                                 </div>
-                             </div>
-                         </div>
+                         </div>--}}
 
                      </div>
                      <!--/.First slide-->
 
                      <!--Second slide-->
-                     <div class="carousel-item active">
+                   {{--  <div class="carousel-item active">
 
                          <div class="col-md-4">
                              <div class="card">
@@ -253,9 +262,9 @@
                              </div>
                          </div>
 
-                     </div>
+                     </div>--}}
                      <!--/.Second slide-->
-
+{{--
                      <!--Third slide-->
                      <div class="carousel-item">
 
@@ -305,7 +314,7 @@
                          </div>
 
                      </div>
-                     <!--/.Third slide-->
+                     <!--/.Third slide-->--}}
 
                  </div>
                  <!--/.Slides-->
