@@ -172,7 +172,7 @@
                                          <div class="card-body card-block text-center">
                                              <h4 class="card-title">{{$merchant->merchant_name}}</h4>
                                              <p class="card-text">{{$merchant->merchant_city}}</p>
-                                  {{--           <a class="btn btn-primary waves-effect waves-light">Subscribe</a>--}}
+                                             <a class="btn btn-primary waves-effect waves-light">Subscribe</a>
                                          </div>
                                      </div>
                                  </div>
@@ -422,7 +422,10 @@
          @if(count($merchants) > 0)
              @foreach($merchants as $merchant)
 
-                 <div class="slide"><img src="https://www.solodev.com/assets/carousel/image3.png"></div>
+                 <div class="slide">  <a href="/merchants/{{$merchant->id}}">
+                         <img src="/storage/merchant_logos/{{$merchant->merchant_logo}}"
+                              class="rounded-circle" height="80px" alt="{{$merchant->merchant_name}} logo">
+                     </a></div>
 
              @endforeach
          @endif
