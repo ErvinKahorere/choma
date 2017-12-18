@@ -15,6 +15,8 @@ use Laravel\Passport\Client;
 class LoginController extends Controller
 {
 
+    use IssueTokenTrait;
+
     private $client;
 
     public function __construct(){
@@ -29,7 +31,7 @@ class LoginController extends Controller
            'password' => 'required'
         ]);
 
-        $params = [
+      /*  $params = [
 
             'grant_type' => 'password',
             'client_id' => $this->client->id,
@@ -43,7 +45,10 @@ class LoginController extends Controller
 
         $proxy = Request::create('oauth/token', 'POST');
 
-        return Route::dispatch($proxy);
+        return Route::dispatch($proxy);*/
+
+
+      return $this->issueToken($request, 'password');
 
 
     }
@@ -57,7 +62,7 @@ class LoginController extends Controller
         ]);
 
 
-        $params = [
+        /*$params = [
 
             'grant_type' => 'refresh_token',
             'client_id' => $this->client->id,
@@ -71,8 +76,9 @@ class LoginController extends Controller
 
         $proxy = Request::create('oauth/token', 'POST');
 
-        return Route::dispatch($proxy);
+        return Route::dispatch($proxy);*/
 
+       return $this->issueToken($request, 'refresh_token');
 
 
 
