@@ -88,7 +88,7 @@
         <!--Copyright-->
         <div class="footer-copyright">
             <div class="container-fluid">
-                © 2018 Copyright: <a href="http://www.viverecreatives.com"> Vivere Technologies </a>
+                © 2018 Copyright: <a href="http://www.viverecreatives.com"> Press Play </a>
 
             </div>
         </div>
