@@ -53,15 +53,13 @@
                         <li><a href="#!">+264 81 377 0919</a></li>
                         <li><a href="#!">hello@choma.co</a></li>
                         <br>
-                        <li><a href="#!">We are Social</a>
+                        <li>We are Social
                         <hr>
                         <!--Facebook-->
 <a type="button" class="btn-floating btn-large btn-fb"><i class="fa fa-facebook"></i></a>
 <!--Twitter-->
 <a type="button" class="btn-floating btn-large btn-tw"><i class="fa fa-twitter"></i></a>
-<!--Google +-->
-<a type="button" class="btn-floating btn-large btn-gplus"><i class="fa fa-google-plus"></i></a>
-<!--Linkedin-->
+
                         
                         </li>
                         
