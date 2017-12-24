@@ -87,4 +87,10 @@ public function activity()
     return $this->hasMany(Activity::class);
 }
 
+public function socialAccounts(){
+
+    return $this->hasMany(SocialAccount::class);
+
+}
+
 }
