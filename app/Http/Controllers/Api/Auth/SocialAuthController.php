@@ -14,46 +14,46 @@ use Laravel\Passport\Client;
 class SocialAuthController extends Controller
 {
 
-	use IssueTokenTrait;
+    use IssueTokenTrait;
 
-	private $client;
+    private $client;
 
-	public function __construct(){
-		$this->client = Client::find(1);
-	}
+    public function __construct(){
+        $this->client = Client::find(1);
+    }
 
     public function socialAuth(Request $request){
 
-    	$this->validate($request, [
-    		'name' => 'required',
-    		'email' => 'nullable|email',
-    		'provider' => 'required|in:facebook,twitter,google',
-    		'provider_user_id' => 'required'
-    	]);
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'nullable|email',
+            'provider' => 'required|in:facebook,twitter,google',
+            'provider_user_id' => 'required'
+        ]);
 
-    	$socialAccount = SocialAccount::where('provider', $request->provider)->where('provider_user_id', $request->provider_user_id)->first();
+        $socialAccount = SocialAccount::where('provider', $request->provider)->where('provider_user_id', $request->provider_user_id)->first();
 
-    	if($socialAccount){
-    		return $this->issueToken($request, 'social');
-    	}
+        if($socialAccount){
+            return $this->issueToken($request, 'social');
+        }
 
         //Since we can have nullable email, we need to make sure that user email is not null ;)
         //Thx to hdahon for the fix
-    	$user = User::where('email', $request->email)
-                    ->whereNotNull("email")
-                    ->first();
+        $user = User::where('email', $request->email)
+            ->whereNotNull("email")
+            ->first();
 
-    	if($user){
-    		$this->addSocialAccountToUser($request, $user);
-    	}else{
-    		try{
-    			$this->createUserAccount($request);
-    		}catch(\Exception $e){
-    			return response("An Error Occured, please retry later", 422);
-    		}
-    	}
+        if($user){
+            $this->addSocialAccountToUser($request, $user);
+        }else{
+            try{
+                $this->createUserAccount($request);
+            }catch(\Exception $e){
+                return response("An Error Occured, please retry later", 422);
+            }
+        }
 
-    	return $this->issueToken($request, 'social');
+        return $this->issueToken($request, 'social');
     }
 
     /**
@@ -63,17 +63,17 @@ class SocialAuthController extends Controller
      */
     private function addSocialAccountToUser(Request $request, User $user){
 
-    	$this->validate($request, [
-    		'provider' => ['required', Rule::unique('social_accounts')->where(function($query) use ($user) {
-    			return $query->where('user_id', $user->id);
-    		})],
-    		'provider_user_id' => 'required'
-    	]);
+        $this->validate($request, [
+            'provider' => ['required', Rule::unique('social_accounts')->where(function($query) use ($user) {
+                return $query->where('user_id', $user->id);
+            })],
+            'provider_user_id' => 'required'
+        ]);
 
-    	$user->socialAccounts()->create([
-			'provider' => $request->provider,
-    		'provider_user_id' => $request->provider_user_id
-    	]);
+        $user->socialAccounts()->create([
+            'provider' => $request->provider,
+            'provider_user_id' => $request->provider_user_id
+        ]);
 
     }
 
@@ -84,16 +84,16 @@ class SocialAuthController extends Controller
      */
     private function createUserAccount(Request $request){
 
-    	DB::transaction( function () use ($request){
+        DB::transaction( function () use ($request){
 
-    		$user = User::create([
-    			'name' => $request->name,
-    			'email' => $request->email
-    		]);
+            $user = User::create([
+                'name' => $request->name,
+                'email' => $request->email
+            ]);
 
-    		$this->addSocialAccountToUser($request, $user);
+            $this->addSocialAccountToUser($request, $user);
 
-    	});
+        });
 
     }
 }
