@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class SocialAccount extends Model
@@ -10,7 +11,7 @@ class SocialAccount extends Model
 
     public function user(){
 
-        return $this->belongTo(User::class);
+        return $this->belongsTo(User::class);
 
     }
 }
