@@ -6,6 +6,7 @@ use Laravel\Passport\Bridge\RefreshTokenRepository;
 use Laravel\Passport\Bridge\UserRepository;
 use Laravel\Passport\Passport;
 use League\OAuth2\Server\AuthorizationServer;
+
 class SocialAuthServiceProvider extends ServiceProvider
 {
     /**
