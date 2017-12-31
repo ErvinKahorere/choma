@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 use Laravel\Passport\Client;
 
+
 class SocialAuthController extends Controller
 {
 
@@ -19,7 +20,7 @@ class SocialAuthController extends Controller
 	private $client;
 
 	public function __construct(){
-		$this->client = Client::find(2);
+		$this->client = Client::find(3);
 	}
 
     public function socialAuth(Request $request){
