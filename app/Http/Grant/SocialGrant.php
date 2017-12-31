@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace App\Http\Grant;
 
@@ -17,7 +17,7 @@ use Psr\Http\Message\ServerRequestInterface;
 
 class SocialGrant extends AbstractGrant{
 
-    /**
+	/**
      * @param UserRepositoryInterface         $userRepository
      * @param RefreshTokenRepositoryInterface $refreshTokenRepository
      */
@@ -78,7 +78,7 @@ class SocialGrant extends AbstractGrant{
             throw OAuthServerException::invalidRequest('provider_user_id');
         }
 
-        $user = $this->getUserFromSocialNetwork(new Request($request->getParsedBody()));
+        $user = $this->getUserFromSocialNetwork(new Request($request->getParsedBody())); 
 
         if ($user instanceof UserEntityInterface === false) {
             $this->getEmitter()->emit(new RequestEvent(RequestEvent::USER_AUTHENTICATION_FAILED, $request));
@@ -91,7 +91,7 @@ class SocialGrant extends AbstractGrant{
 
     private function getUserFromSocialNetwork(Request $request){
 
-        $provider = config('auth.guards.api.provider');
+    	$provider = config('auth.guards.api.provider');
 
         if (is_null($model = config('auth.providers.'.$provider.'.model'))) {
             throw new RuntimeException('Unable to determine authentication model from configuration.');
