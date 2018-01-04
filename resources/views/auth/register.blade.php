@@ -314,7 +314,7 @@
         </div>
     </nav>
 
-@include('inc.messages')
+{{--@include('inc.messages')--}}
 
 
 
