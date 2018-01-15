@@ -12,9 +12,9 @@
 
                                 <!--Card image-->
                                 <div class="view overlay hm-white-slight">
-                                    <img src="/storage/cover_images/{{$card->cover_image}}" class="img-fluid" alt="">
+       {{--                             <img src="/storage/cover_images/{{$card->cover_image}}" class="img-fluid" alt="">
                                     <a href="/cards/{{$card->channel->name}}/{{$card->id}}">
-
+--}}
 
             <div class="mask waves-effect waves-light"></div>
         </a>
