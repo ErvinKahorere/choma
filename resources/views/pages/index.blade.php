@@ -12,9 +12,9 @@
 
                                 <!--Card image-->
                                 <div class="view overlay hm-white-slight">
-       {{--                             <img src="/storage/cover_images/{{$card->cover_image}}" class="img-fluid" alt="">
+                                <img src="/storage/cover_images/{{$card->cover_image}}" class="img-fluid" alt="">
                                     <a href="/cards/{{$card->channel->name}}/{{$card->id}}">
---}}
+
 
             <div class="mask waves-effect waves-light"></div>
         </a>
@@ -24,7 +24,7 @@
                                   <!--Card content-->
     <div class="card-block text-center">
         <!--Category & Title--> 
-       {{--<h4 class="card-title"><a href="/cards/{{$card->channel->name}}/{{$card->id}}">{{$card->card_product_name}}</a></h4>--}}
+       <h4 class="card-title"><a href="/cards/{{$card->channel->name}}/{{$card->id}}">{{$card->card_product_name}}</a></h4>
 
         <!--Description-->
         <p class="card-text"> <a href="/merchants/{{$card->merchant->id}}">  {!!$card->merchant->merchant_name!!} </a>
